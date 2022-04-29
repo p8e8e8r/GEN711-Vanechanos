@@ -17,8 +17,16 @@ author et al 2019 assembled the genome of --- we compared
 
 ## Methods
 
+A Conda Environment was first loaded through the following commands
 
 
+### conda install wget
+
+
+wget https://data.qiime2.org/distro/core/qiime2-2022.2-py38-osx-conda.yml
+conda env create -n qiime2-2022.2 --file qiime2-2022.2-py38-osx-conda.yml
+### CLEANUP
+rm qiime2-2022.2-py38-osx-conda.yml
 
 
 
