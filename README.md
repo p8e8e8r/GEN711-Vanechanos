@@ -3,11 +3,11 @@
 ## GEN711-Vanechanos
 
 
-##Background
+## Background
 
 discussion
 
-###even smaller heading
+### even smaller heading
 
 we were interested...
 
@@ -15,7 +15,7 @@ we were interested...
 
 author et al 2019 assembled the genome of --- we compared
 
-##Methods
+## Methods
 
 
 
@@ -32,7 +32,7 @@ author et al 2019 assembled the genome of --- we compared
 
 
 
-##Findings
+## Findings
 
 
 to add a plot from 'figs folder there needs to be a line in this document that looks like this
