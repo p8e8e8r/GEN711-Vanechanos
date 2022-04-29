@@ -9,8 +9,7 @@ discussion
 
 ### even smaller heading
 
-we were interested...
-
+The project was focused on determining how bacterial species differ between mudflats and oyster beds, such 
 
 
 author et al 2019 assembled the genome of --- we compared
@@ -20,8 +19,8 @@ A Conda Environment was first loaded through the following commands along with w
 
 
 ### Installing  wget
-brew install wget
 
+brew install wget
 
 ### conda install wget
 
@@ -103,10 +102,10 @@ qiime fragment-insertion sepp \
 
 
 
-###Author et al. 2019 sequences we downloaded from
-###our files were in fastqz
-###we installed x programs with a conda envronment
-###we ran our analysis on 
+### Author et al. 2019 sequences we downloaded from
+### our files were in fastqz
+### we installed x programs with a conda envronment
+### we ran our analysis on 
 
 
 
