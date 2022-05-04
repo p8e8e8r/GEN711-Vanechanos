@@ -5,14 +5,10 @@
 
 ## Background
 
-discussion
 
-### even smaller heading
-
-The project was focused on determining how bacterial species differ between mudflats and oyster beds, such 
+  The project was focused on determining how bacterial species differ between mudflats and oyster beds, such that samples of the data were taken from the Great Bay where the benthic bacterial diversity was examined in both mudflats and Oyster beds. Due to limited coast line, this region holds great importance to the State of New Hampshire and such attempts to understand how the habitat itself has an effect on the bacterial community can potentially lead to more efficient practices in aquaculture.
 
 
-author et al 2019 assembled the genome of --- we compared
 
 ## Methods
 A Conda Environment was first loaded through the following commands along with wget
@@ -23,7 +19,6 @@ A Conda Environment was first loaded through the following commands along with w
 brew install wget
 
 ### conda install wget
-
 
 wget https://data.qiime2.org/distro/core/qiime2-2022.2-py38-osx-conda.yml
 conda env create -n qiime2-2022.2 --file qiime2-2022.2-py38-osx-conda.yml
@@ -75,6 +70,9 @@ qiime dada2 denoise-paired \
 --verbose
 
 
+
+
+
 ### metadata tabulate step
 
 qiime metadata tabulate \
@@ -82,12 +80,46 @@ qiime metadata tabulate \
 --o-visualization ./dada2_rep_set.qzv
 
 
-### not working
-
 qiime feature-table tabulate-seqs \
 --i-data ./dada2_rep_set.qza \
 --o-visualization rep-seqs
 
+
+
+
+### feature-classifier
+
+qiime feature-classifier classify-consensus-vsearch \
+--i-query rep-seqs.qza \
+--i-reference-reads silva132_99.qza \
+--i-reference-taxonomy majority_taxonomy_all_levels.qza \
+--p-maxaccepts 5 \
+--p-query-cov 0.4 \
+--p-perc-identity 0.7 \
+--o-classification vsearch_taxonomy \
+--p-threads 4 \
+--verbose
+
+
+
+### V-search taxonomy
+
+qiime metadata tabulate \
+--m-input-file vsearch_taxonomy.qza \
+--o-visualization vsearch_taxonomy
+
+
+### Taxa barplot
+
+qiime taxa barplot \
+--i-table table.qza \
+--i-taxonomy vsearch_taxonomy.qza \
+--o-visualization taxa-barplot \
+--m-metadata-file dns.qza
+
+
+
+## Other avanues of approch potential for future
 
 ### philogenetic reconstruction
 
@@ -105,7 +137,7 @@ qiime fragment-insertion sepp \
 ### Author et al. 2019 sequences we downloaded from
 ### our files were in fastqz
 ### we installed x programs with a conda envronment
-### we ran our analysis on 
+
 
 
 
