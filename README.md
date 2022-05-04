@@ -86,7 +86,6 @@ qiime feature-table tabulate-seqs \
 
 
 
-
 ### feature-classifier
 
 qiime feature-classifier classify-consensus-vsearch \
@@ -144,15 +143,8 @@ qiime fragment-insertion sepp \
 ## Findings
 
 
-to add a plot from 'figs folder there needs to be a line in this document that looks like this
-
-![plot(figs/Taxa bar plot-Van)]
-
-
-![plot(figs/plotfile.png)]
-
 <img width="638" alt="Taxa bar plot-Van" src="https://user-images.githubusercontent.com/103777822/166624313-2b9623da-b806-4188-80e1-6aefcf820679.png">
 
-![plot(pheno/)]
+
 
 
