@@ -114,6 +114,9 @@ qiime fragment-insertion sepp \
 
 to add a plot from 'figs folder there needs to be a line in this document that looks like this
 
+![plot(figs/Taxa bar plot-Van)]
+
+
 ![plot(figs/plotfile.png)]
 
 ![plot(pheno/)]
